@@ -1,0 +1,28 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "项目脚手架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "sx": "./bin/sx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YealZoy/projectTemplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YealZoy/projectTemplate/issues"
+  },
+  "homepage": "https://github.com/YealZoy/projectTemplate#readme",
+  "devDependencies": {
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.11.0",
+    "download-git-repo": "^1.0.1"
+  }
+}

@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+process.env.NODE_PATH = __dirname
+
+const program = require('commander')
+
+const download = require('download-git-repo')
+
+program
+  .version(require('../package').version)
+
+program
+  .usage('<command>')
+
+program
+  .command('init')
+  .description('项目初始化')
+  .alias('i')
+  .action(() => {
+        download('https://github.com:YealZoy/blackboard', 'temp', { clone: true }, function (err) {
+            console.log(err ? 'Error' : 'Success')
+        })
+  })
+
+program
+  .command('update')
+  .description('拉取最新代码')
+  .alias('u')
+  .action(() => {
+
+  })
+
+program
+  .command('push')
+  .description('提交代码')
+  .alias('p')
+  .action(() => {
+
+  })
+
+
+program.parse(process.argv)
+
+if(!program.args.length){
+  program.help()
+}
